@@ -1,0 +1,11 @@
+/* Grid
+########################################################################## */
+
+.grid{
+    display: grid;
+    gap: var(--m);
+}
+
+.grid[data-columns='2']{
+    grid-template-columns: repeat(2, 1fr);
+}
