@@ -1,0 +1,132 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* second part */
+.hero {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    width: 100vw;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6rem;
+    color: var(--secondary);
+}
+
+.hero figure {
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 80%;
+    pointer-events: none;
+}
+
+.hero figure img {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    filter: brightness(0.5);
+    transform: translate(-50%, -50%) scaleX(-1);
+}
+
+.hero figure figcaption {
+    position: absolute;
+    right: 6rem;
+    bottom: 1.5rem;
+    font-size: 0.8rem;
+}
+
+.hero h2 {
+    width: 40%;
+    font-family: var(--font-family-serif);
+    font-size: 3rem;
+    font-weight: var(--font-weight-bold);
+}
+
+.hero p {
+    width: 45%;
+    color: var(--secondary);
+    font-size: 1.5rem;
+}
+
+.hero a {
+    color: var(--secondary);
+    font-size: 1.25rem;
+    text-decoration: underline;
+    text-underline-offset: 0.4rem;
+}
+
+/* first part */
+.subheader {
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-bold);
+}
+
+.catcher {
+    width: 78%;
+}
+
+.catcher * {
+    margin: var(--spacing-margin-medium) 0 0;
+}
+
+.catcher p:last-child {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.catcher p:last-child svg {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.catcher hr {
+    width: 22%;
+    border-top: 3px solid var(--accent-lighter);
+}
+
+/* other parts */
+article:not([class]) {
+    width: 78%;
+    height: fit-content;
+}
+
+article:not([class]) h2 {
+    color: var(--accent);
+    font-family: var(--font-family-serif);
+    font-size: 1.3rem;
+    font-weight: var(--font-weight-normal);
+    text-transform: uppercase;
+}
+
+article:not([class]) h3 {
+    font-family: var(--font-family-serif);
+    font-size: 2rem;
+    font-weight: var(--font-weight-bold);
+}
+
+article:not([class]) figure {
+    width: 80%;
+    margin-left: 10%;
+}
+
+article:not([class]) hr {
+    width: 50%;
+    border-top: 2px solid var(--accent-lighter);
+    margin-left: 25%;
+}
+
+/* navbar link highlight */
+.navbar li:nth-child(2) a {
+    text-decoration: underline;
+    text-underline-offset: 0.4rem;
+}

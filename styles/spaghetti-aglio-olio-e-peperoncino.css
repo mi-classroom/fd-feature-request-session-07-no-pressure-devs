@@ -1,0 +1,248 @@
+/* recipe */
+article ol {
+    counter-reset: my-counter;
+    list-style-type: none;
+}
+
+article ol li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+article ol li::before {
+    position: absolute;
+    top: -1rem;
+    left: 0;
+    color: var(--accent);
+    content: counter(my-counter);
+    counter-increment: my-counter;
+    font-size: 3rem;
+    font-weight: var(--font-weight-bold);
+}
+
+article ol li p {
+    margin-left: 2rem;
+}
+
+/* inter nav */
+.intern-nav {
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    margin-top: -0.25rem;
+    background-color: var(--accent-lightest);
+}
+
+.intern-nav ul {
+    padding: 1rem;
+    list-style: none;
+}
+
+.intern-nav li {
+    margin-right: 0;
+}
+
+.intern-nav li a {
+    text-decoration: none;
+}
+
+.intern-nav li a[data-state="active"] {
+    text-decoration: underline;
+    text-underline-offset: 0.2rem;
+}
+
+/* hero */
+.hero {
+    position: relative;
+    left: 50%;
+    display: flex;
+    overflow: hidden;
+    width: 99vw;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6rem;
+    margin-bottom: 4rem;
+    color: var(--secondary);
+    transform: translateX(-50%);
+}
+
+.hero figure {
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 80%;
+    pointer-events: none;
+}
+
+.hero figure img {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    filter: brightness(0.5);
+    transform: translate(-50%, -50%) scaleX(-1);
+}
+
+.hero h1 {
+    width: 36%;
+    color: var(--secondary);
+    font-family: "IBM Plex Serif", serif;
+    font-size: 3rem;
+    font-weight: var(--font-weight-bold);
+}
+
+.hero p {
+    width: 45%;
+    color: var(--secondary);
+    font-size: 1.2rem;
+}
+
+/* header */
+h2 {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-normal);
+}
+
+h2 .highlighted {
+    padding: 0.2rem 0.7rem;
+    margin: 0 0.5rem;
+    background-color: var(--accent-lighter);
+    border-radius: 1rem;
+    font-weight: var(--font-weight-bold);
+}
+
+/* articles */
+article h2 {
+    margin-bottom: 2rem;
+    font-family: "IBM Plex Serif", serif;
+    font-size: 2rem;
+    font-weight: var(--font-weight-bold);
+}
+
+.ingredients,
+.nutritional-values {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* ingredients */
+.ingredients {
+    display: inline-block;
+    width: 45%;
+}
+
+table {
+    width: 100%;
+    border: 1px solid var(--accent);
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 8px;
+    border-right: 1px solid var(--accent);
+    border-bottom: 1px solid var(--accent);
+    text-align: left;
+}
+
+td {
+    padding-right: 6rem;
+}
+
+td:last-child {
+    border-right: none;
+}
+
+/* nutritional values */
+.nutritional-values {
+    display: block;
+    width: 45%;
+    float: right;
+}
+
+.nutritional-values dl {
+    margin: 20px 0 0;
+}
+
+.nutritional-values dt {
+    margin: 20px 0 0;
+    font-size: 1.2rem;
+}
+
+.nutritional-values dd {
+    color: var(--accent);
+    font-family: "IBM Plex Serif", serif;
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-bold);
+}
+
+/* form */
+
+form {
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+}
+
+form input {
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    font-size: 20px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.form-container .input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    width: 100%;
+    height: 10rem;
+}
+
+label[for="data"] {
+    display: flex;
+    align-items: center;
+}
+
+form input[type="checkbox"] {
+    width: 2rem;
+    height: 2rem;
+    margin-top: 2rem;
+    margin-right: 2rem;
+}
+
+form button {
+    padding: 1rem 4rem;
+    border: none;
+    background: #d9d9d9;
+    border-radius: 0;
+    outline: none;
+}
+
+.invalid {
+    border: 2px solid red;
+}
+
+.invalid-label {
+    color: red;
+}
+
+/* navbar link highlight */
+.navbar li:nth-child(1) a {
+    text-decoration: underline;
+    text-underline-offset: 0.4rem;
+}
