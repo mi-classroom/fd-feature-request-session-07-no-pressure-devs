@@ -368,6 +368,8 @@ form input[type="checkbox"] {
     counter-increment: step-count;
 }
 
+
+
 .steps > li.is-text-only{
     display: flex;
     justify-content: center;
@@ -380,19 +382,27 @@ form input[type="checkbox"] {
 .steps > li figure{
     display: flex;
     width: auto;
+    flex-direction: column;
     align-items: center;
     margin: 0;
     gap: var(--m);
 }
 
-.steps > li figure > *{
-    width: 50%;
-    flex-basis: 50%;
-    flex-grow: 1;
-}
+@media screen and (width >= 600px) {
+    .steps > li figure{
+        flex-direction: row;
+    }
 
-.steps .is-reversed{
-    flex-direction: row-reverse;
+    .steps > li figure > *{
+        width: 50%;
+        flex-basis: 50%;
+        flex-grow: 1;
+    }
+
+
+    .steps .is-reversed{
+        flex-direction: row-reverse;
+    }
 }
 
 .steps .has-counter{
