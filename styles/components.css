@@ -368,6 +368,14 @@ form input[type="checkbox"] {
     counter-increment: step-count;
 }
 
+
+@media (min-width: 500px){
+    .steps > li figure{
+        flex-direction: row;
+    }
+}
+
+
 .steps > li.is-text-only{
     display: flex;
     justify-content: center;
@@ -379,6 +387,7 @@ form input[type="checkbox"] {
 
 .steps > li figure{
     display: flex;
+    flex-direction: column;
     width: auto;
     align-items: center;
     margin: 0;
