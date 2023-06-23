@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;700&display=swap");
 
 :root {
-    --base-size: calc(0.4rem + 1vw);
+    --base-size: 1rem;
 
     /* Sizes */
     --xs: calc(0.5 * var(--base-size));
