@@ -1,0 +1,9 @@
+{
+    "liveServer.settings.port": 5503,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.stylelint": true
+    },
+    "githubPullRequests.ignoredPullRequestBranches": [
+        "main"
+    ]
+}
